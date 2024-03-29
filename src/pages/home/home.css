@@ -1,0 +1,8 @@
+.home__section{
+    width: var(--fullscreen-width);
+}
+
+.home__wrapper{
+    width: var(--medium-width);
+    margin-inline: auto;
+}

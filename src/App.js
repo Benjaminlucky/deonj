@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/Home'; // Remove curly braces
+import About from './pages/about/About'; // Remove curly braces
+import Products from './pages/products/Products'
+import Contact from './pages/contact/Contact'
+import Navmenu from './components/navmenu/Navmenu';
+
+
+import './index.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Router>
+        <Navmenu />
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route path='/about' element={<About />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

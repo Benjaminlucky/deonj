@@ -1,0 +1,229 @@
+.hero__container {
+    width: 100%;
+}
+  
+.hero__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero__left{
+    width: 100%;
+}
+
+.hero__left span{
+    color: var(--gold-shade1);
+}
+
+.hero__left h1{
+    font-size: 2.2rem;
+    line-height: 1.3;
+    padding: .5rem 0;
+    margin-bottom: 2rem;
+    animation: zoomIn 1.5s ease; /* Animation duration and timing function */
+    transform-origin: center;
+}
+
+.hero__button{
+    display: flex;
+    background-color: var(--gold-shade1);
+    width: 70%;
+    padding: 1rem;
+    border-radius: .2rem;
+    color: var(--bg-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    animation: zoomIn 1.5s ease; /* Animation duration and timing function */
+    transform-origin: center;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroW__icon{
+    font-size: 2.5rem;
+}
+  
+.hero__right {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+  
+.hero__right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2rem; /* Apply border-radius to the image */
+    transform: scale(1);
+    transition: all 0.5s ease-out;
+    animation: zoomIn 1.5s ease; /* Animation duration and timing function */
+    transform-origin: center;
+}
+
+.hero__right:hover img{
+    transform: scale(1.4);
+    transition: all 0.5s ease-in;
+}
+
+
+.hero__button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 1.5s linear ease-in-out;
+    transform: rotate(45deg);
+    animation: shine 2s infinite linear;
+  }
+  
+  .hero__button:hover::after {
+    transform: rotate(45deg) translateX(300px);
+  }
+  
+  .hero__button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 1.5s linear ease-in;
+    transform: rotate(-45deg);
+    animation: shine 2s infinite linear;
+  }
+  
+  .hero__button:hover::before {
+    transform: rotate(-45deg) translateX(300px);
+  }
+  
+  @keyframes shine {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }
+
+
+@keyframes zoomIn {
+    0% {
+      transform: scale3d(1, 1, 1); /* Initial scale */
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1); /* Zoom-in effect */
+    }
+    100% {
+      transform: scale3d(1, 1, 1); /* Back to original scale */
+    }
+  }
+
+  
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+   .hero__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+   }
+
+   .hero__left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   }
+
+   .hero__left h1{
+    text-align: center;
+    font-size: 1.9rem;
+    margin: 0;
+   }
+
+   .hero__left span {
+    text-align: center;
+    margin-top: 1.5rem;
+   }
+   .hero__button{
+    display: flex;
+    margin-inline: auto;
+    width: 90%;
+    margin-top: 1.5rem;
+   }
+
+   .hero__right img{
+    border-radius: 1rem;
+   }
+
+   .hero__right {
+    border-radius: 1rem;
+   }
+}
+
+
+@media only screen and (max-width: 767px) {
+    /* Add your CSS rules here */
+    .hero__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    }
+    
+    .hero__left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+    
+    .hero__left h1{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+    }
+    
+    .hero__left span {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: .7rem;
+    }
+    .hero__button{
+    display: flex;
+    margin-inline: auto;
+    width: 90%;
+    margin-top: 1.5rem;
+    font-size: .9rem;
+    padding: .5rem;
+    }
+
+    .heroW__icon {
+        font-size: 2rem;
+    }
+    
+    .hero__right img{
+    border-radius: 1rem;
+    }
+    
+    .hero__right {
+        border-radius: 1rem;
+    }
+
+}
