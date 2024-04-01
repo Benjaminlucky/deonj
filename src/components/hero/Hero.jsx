@@ -9,7 +9,7 @@ function Hero() {
             <div className="hero__left">
                 <span>Welcome to DeonJ GLOBAL Resources Ltd</span>
                 <h1>Your Gateway to Premium Quality Solid Minerals, Agro Products, and Contracting Services</h1>
-                <Link to='https://wa.me/+2348053642425?text=Hello%20Deonj%20Global!
+                <Link to='https://wa.me/+2349051043492?text=Hello%20Deonj%20Global!
                     ' className='hero__button'>
                     Reach us on WhatsApp 
                     <RiWhatsappFill className='heroW__icon' />

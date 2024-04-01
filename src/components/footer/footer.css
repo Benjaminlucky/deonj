@@ -1,0 +1,98 @@
+.footer__section{
+    width: var(--fullscreen-width);
+}
+
+.footer__wrapper{
+    width: var(--medium-width);
+    margin-inline: auto;
+    padding: 3rem 0;
+}
+
+.footer__content{
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer__left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social__handles {
+    display: flex;
+    gap: 1rem;
+}
+
+.social__handles a{
+    text-decoration: none;
+    color: var(--gold-shade1);
+    font-size: 2rem;
+}
+
+.footer__right{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.quick__links{
+    display: flex;
+    gap: 2rem;
+}
+
+.quick__links a {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.gold{
+    color: var(--gold-shade1);
+}
+
+
+/* CSS for small devices (like smartphones) */
+@media only screen and (max-width: 767px) {
+    /* Add your CSS rules here */
+    .footer__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .quick__links{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-inline: auto;
+        gap: 2rem;
+    }
+
+    .quick__links a {
+        text-align: center;
+    }
+    .footer__left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .deonj__logo{
+        display: flex;
+        margin-inline: auto;
+    }
+
+    .social__handles {
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .copyrights {
+        text-align: center;
+    }
+}

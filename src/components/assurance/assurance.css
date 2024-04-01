@@ -20,13 +20,23 @@
 .aimage{
     width: 100%;
     height: auto;
+    overflow: hidden;
+    border-radius: 1rem ;
 }
 
 .aimage img{
     width: 100%;
+    height: auto;
     display: flex;
     object-fit: cover;
     border-radius: 1rem;
+    transform: scale(1);
+    transition: all .5s ease-in;
+}
+
+.aimage:hover img{
+    transform: scale(1.2);
+    transition: all .5s ease-out;
 }
 
 .aright__content{

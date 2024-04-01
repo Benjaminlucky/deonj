@@ -1,9 +1,19 @@
 import React from 'react';
 import './contact.css';
-
+import emailjs from 'emailjs-com';
 
 
 function Contact() {
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_fwvi05a', 'template_t3mz2hl', e.target, 'Dci8WZ32X7GELcO8-')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
   return (
     <div className="contact__section">
         <div className="contact__content">
@@ -13,7 +23,7 @@ function Contact() {
                     <div className="contact__title">Contact us</div>
                     <p>Get in touch with our team today to discuss your requirements and discover how Deon J GLOBAL Resources Ltd can fulfill your needs with excellence and reliability.</p>
                     <div className="contact__form">
-                        <form action="" className='form'>
+                        <form method="POST" onSubmit={sendEmail} className='form'>
                             <div className="form__input">
                                 <label htmlFor="fullname">Full Name</label>
                                 <input type="text" id='fullname' name='fullname' placeholder='Enter your full name'  required/>

@@ -20,14 +20,14 @@ export const menuLinks = [
 
 export const products = [
     {
-        image: './assets/gold-product1.jpg',
+        image: './assets/lead-ore.jpeg',
         name: 'Solid Minerals',
-        desc: 'Explore our range of premium solid minerals including bitter kola, peanuts, and soybeans, meticulously sourced and delivered to meet international standards.'
+        desc: 'Explore our range of premium solid minerals Including lithium ore, lead ore, iron ore, and gemstones meticulously sourced and delivered to meet international standards.'
     },
     {
-        image: './assets/agro-product2.jpg',
+        image: './assets/soybean.webp',
         name: 'Agro Products',
-        desc: 'Experience the freshness and quality of our agro products, grown using sustainable farming methods and harvested at peak ripeness.'
+        desc: 'Explore our range of agro produce including bitter kola,soya beans, peanuts,Cassava and many more, meticulously sourced and delivered to meet international standards.'
     },
     {
         image: './assets/contract-prouct3.jpg',

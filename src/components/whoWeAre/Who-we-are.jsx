@@ -6,7 +6,7 @@ function Who() {
     <div className="whoWeAre__container">
         <div className="who__content">
             <div className="who__left">
-                <img src="./assets/Kola-nut.webp" alt="Kola nut" />
+                <img src="./assets/bitter-kola.jpeg" alt="Kola nut" />
             </div>
             <div className="who__right">
                 <div className="who__title">Who we are</div>

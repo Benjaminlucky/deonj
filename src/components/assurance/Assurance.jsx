@@ -7,7 +7,7 @@ function Assurance() {
         <div className="assurance__content">
             <div className="assurance__left">
                 <div className="aimage">
-                    <img src="./assets/bitter-kola.jpeg" alt="Bitter Kola" />
+                    <img src="./assets/spodumene.webp" alt="Bitter Kola" />
                 </div>
             </div>
             <div className="assurance__right">

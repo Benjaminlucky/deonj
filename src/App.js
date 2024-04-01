@@ -7,6 +7,7 @@ import Navmenu from './components/navmenu/Navmenu';
 
 
 import './index.css'
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
