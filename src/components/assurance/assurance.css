@@ -31,12 +31,12 @@
     object-fit: cover;
     border-radius: 1rem;
     transform: scale(1);
-    transition: all .5s ease-in;
+    transition: all .2s ease-in;
 }
 
 .aimage:hover img{
     transform: scale(1.2);
-    transition: all .5s ease-out;
+    transition: all .2s ease-out;
 }
 
 .aright__content{

@@ -1,15 +1,18 @@
 import React from 'react';
+import { useState } from 'react';
 import './contact.css';
 import emailjs from 'emailjs-com';
 
 
 function Contact() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
     function sendEmail(e) {
         e.preventDefault();
 
         emailjs.sendForm('service_fwvi05a', 'template_t3mz2hl', e.target, 'Dci8WZ32X7GELcO8-')
             .then((result) => {
                 console.log(result.text);
+                setIsSubmitted(true);
             }, (error) => {
                 console.log(error.text);
             });
@@ -23,6 +26,7 @@ function Contact() {
                     <div className="contact__title">Contact us</div>
                     <p>Get in touch with our team today to discuss your requirements and discover how Deon J GLOBAL Resources Ltd can fulfill your needs with excellence and reliability.</p>
                     <div className="contact__form">
+                        {!isSubmitted ? (
                         <form method="POST" onSubmit={sendEmail} className='form'>
                             <div className="form__input">
                                 <label htmlFor="fullname">Full Name</label>
@@ -46,6 +50,12 @@ function Contact() {
                             </div>
                             <button type="submit">Submit Form</button>
                         </form>
+                        ) : (
+                            <div className='email__confirmation'>
+                                <p>Thank you for contacting us!</p>
+                                <p>We'll get back to you shortly.</p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

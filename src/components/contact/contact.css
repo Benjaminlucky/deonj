@@ -89,6 +89,7 @@ textarea:focus{
     outline: none;
     font-weight: bold;
     font-size: 1rem;
+    color: var(--gold-shade1);
 }
 
 input::placeholder, textarea::placeholder{
@@ -111,8 +112,12 @@ button{
 button:hover{
     opacity: .8;
     transition: all .2s ease-in;
+    cursor: pointer;
 }
 
+.email__confirmation {
+    color: var(--gold-shade1);
+}
 
 /* CSS for tablets */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
